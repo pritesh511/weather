@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Container from "./components/Container/Container";
 
 const AppWrapper = styled.div`
-height: 97vh;
+height: 100vh;
 width: 100%;
 display: flex;
 align-items: center;
