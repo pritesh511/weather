@@ -1,6 +1,7 @@
 import {MainWrapper, MainHeading} from './styles'
 import '../Container/CityCompo/CityCompo'
 import CityCompo from '../Container/CityCompo/CityCompo';
+// import WeatherInfo from './WeatherInfo/WeatherInfo';
 
 const Container = () =>{
     return(
@@ -8,6 +9,7 @@ const Container = () =>{
         <MainWrapper>
             <MainHeading>React Weather App</MainHeading>
             <CityCompo/>
+            {/* <WeatherInfo/> */}
         </MainWrapper>
         </>
     )
