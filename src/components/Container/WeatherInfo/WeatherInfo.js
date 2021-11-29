@@ -65,14 +65,15 @@ font-size: 16px;
 line-height: 16px;
 `;
 export {WeatherText, Condition,  WeatherTemp, Temp, TempImg, WeatherCity, WeatherInfoText, WeatherInfoWrap, WeatherBlock, WeatherInfoImg, WeatherInfoContent}
-const WeatherInfo = () => {
+const WeatherInfo = (props) => {
+    const {weather} = props;
     return(
         <>
         <WeatherTemp>
-            <Temp>14 C</Temp>
+            <Temp>{`${weather.main.temp}`}</Temp>
             <TempImg src={TempImage}></TempImg>
         </WeatherTemp>
-        <WeatherCity>Surat, Gujarat</WeatherCity>
+        <WeatherCity>{`${weather.name}, ${weather.sys.country}`}</WeatherCity>
         <WeatherInfoText>Weather Info</WeatherInfoText>
         <WeatherInfoWrap>
             <WeatherBlock>
