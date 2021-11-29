@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import cloud from '../../../assets/images/cloud.jpg'
 
@@ -29,14 +28,12 @@ button{
 `;
 
 export {WeatherImage, WeatherForm}
-const CityCompo = () =>{
-    const [Loacation, setLoaction] = useState("london");
-    console.log(Loacation);
-    console.log(setLoaction);
+const CityCompo = (props) =>{
+    const {setLoaction, featchweather} = props;
     return(
         <>
         <WeatherImage src={cloud}></WeatherImage>
-        <WeatherForm>
+        <WeatherForm onSubmit={featchweather}>
             <input type='text' placeholder="City Name" onChange={(e)=>{setLoaction(e.target.value)}}></input>
             <button type="submit">Search</button>
         </WeatherForm>
