@@ -21,8 +21,9 @@ const Container = () =>{
     return(
         <>
         <MainWrapper>
-            <MainHeading>React Weather App</MainHeading>
-            {weather?<WeatherInfo weather={weather}/>:<CityCompo setLoaction={setLoaction} featchweather={featchweather}/>}
+            <MainHeading>React Weather WebApp</MainHeading>
+            <CityCompo setLoaction={setLoaction} featchweather={featchweather}/>
+            <WeatherInfo weather={weather}/>
         </MainWrapper>
         </>
     )
